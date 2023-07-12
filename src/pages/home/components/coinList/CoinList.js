@@ -13,13 +13,13 @@ export default function CoinList({ coins }) {
             style={{ width: "95%" }}
           >
             {/* Image, Name, Ticker */}
-            <div className="flex items-center w-48">
+            <div className="flex items-center md:w-48">
               <img src={coin.image} alt={coin.name} className="w-10 h-10" />
-              <h1 className="text-xl font-bold ml-3">{coin.name}</h1>
+              <h1 className="md:text-xl font-bold md:ml-3 ml-2">{coin.name}</h1>
               <p className="text-sm ml-2 text-gray-400">{coin.symbol}</p>
             </div>
             {/* current change */}
-            <div>
+            <div className="hidden md:flex">
               <p className="text-sm font-bold text-left">
                 {coin.price_change_percentage_24h.toFixed(2)}% | $
                 {nFormatter(coin.market_cap, 1)}
