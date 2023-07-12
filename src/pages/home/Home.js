@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CoinList from "./components/coinList";
+import Header from "../../components/header";
 
 export default function Home() {
   const [coins, setCoins] = useState([]);
@@ -16,13 +17,10 @@ export default function Home() {
 
   return (
     <div className="w-screen flex flex-col">
-      <div className="[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] sticky top-0 z-50 w-full flex justify-center items-center h-24 bg-white text-gray-800 font-bold text-4xl shadow-md border border-gray-200 rounded-b-xl">
-        Coin
-        <span className="text-orange-500 font-sans italic py-8">Stats</span>
-      </div>
+      <Header />
       {/* main */}
       <div className="relative w-screen flex justify-center items-center">
-        <div className=" w-4/5 shadow-lg pt-4 mt-4 bg-gray-50 mb-4 pb-4 rounded-lg border border-gray-200">
+        <div className=" md:w-4/5 shadow-lg pt-4 mt-4 bg-gray-50 mb-4 pb-4 rounded-lg border border-gray-200">
           <CoinList coins={coins} />
         </div>
       </div>

@@ -5,11 +5,11 @@ export default function CoinList({ coins }) {
   return (
     <div className="w-full flex flex-col space-y-4 items-center">
       {coins.map((coin) => (
-        <Link to={"/" + coin.symbol} className=" w-full">
+        <Link to={"/" + coin.symbol} className=" w-full flex justify-center">
           <div
             onClick={() => {}}
             key={coin.id}
-            className="h-20 shadow mx-4 w-full flex justify-between items-center rounded-md bg-white border border-gray-200 px-4 cursor-pointer hover:bg-gray-100 transition duration-300 ease-in-out"
+            className="h-20 shadow md:mx-4 w-full flex justify-between items-center rounded-md bg-white border border-gray-200 px-4 cursor-pointer hover:bg-gray-100 transition duration-300 ease-in-out"
             style={{ width: "95%" }}
           >
             {/* Image, Name, Ticker */}
