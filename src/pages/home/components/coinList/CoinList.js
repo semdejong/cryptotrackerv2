@@ -5,7 +5,7 @@ export default function CoinList({ coins }) {
   return (
     <div className="w-full flex flex-col space-y-4 items-center">
       {coins.map((coin) => (
-        <Link to={"/" + coin.symbol} className=" w-full flex justify-center">
+        <Link to={"/" + coin.id} className=" w-full flex justify-center">
           <div
             onClick={() => {}}
             key={coin.id}
